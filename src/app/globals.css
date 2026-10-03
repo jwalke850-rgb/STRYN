@@ -1,0 +1,76 @@
+@import "tailwindcss";
+
+:root {
+  --bg: #0b0c0e;
+  --panel: #131417;
+  --panel-2: #191b1f;
+  --line: #25272c;
+  --text: #e9e7e2;
+  --muted: #8d8f95;
+  --accent: #d9a441;
+  --accent-ink: #1a1405;
+  --good: #5fb37c;
+  --bad: #e06c5a;
+  --warn: #d9a441;
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-panel: var(--panel);
+  --color-panel-2: var(--panel-2);
+  --color-line: var(--line);
+  --color-text: var(--text);
+  --color-muted: var(--muted);
+  --color-accent: var(--accent);
+  --color-accent-ink: var(--accent-ink);
+  --color-good: var(--good);
+  --color-bad: var(--bad);
+  --font-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+
+html {
+  color-scheme: dark;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+}
+
+input,
+textarea,
+select {
+  background: var(--panel-2);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 0.5rem 0.65rem;
+  color: var(--text);
+  width: 100%;
+  font-size: 0.9rem;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+
+textarea {
+  line-height: 1.5;
+}
+
+label {
+  display: block;
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 0.3rem;
+}
+
+::selection {
+  background: var(--accent);
+  color: var(--accent-ink);
+}
